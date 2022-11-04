@@ -25,6 +25,15 @@ function generatePassword() {
         return
     }
 
+    //if user enters password less than 8 or more than 128 characters they are redirected by prompt
+    // this is || like saying or
+    //return is the "password length must be between" returned back to the user
+    if (passwordLength < 8 || passwordLength > 128){
+        window.alert("Password length must be between 8 and 128 characters")
+        return
+    }
+
+    
 
 
 
