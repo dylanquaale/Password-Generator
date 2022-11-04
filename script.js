@@ -33,7 +33,9 @@ function generatePassword() {
         return
     }
 
+    var userWantsUppercase = window.confirm("would you like to include uppercase letters in your password?")
     
+
 
 
 
