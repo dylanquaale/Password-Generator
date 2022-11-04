@@ -32,9 +32,15 @@ function generatePassword() {
         window.alert("Password length must be between 8 and 128 characters")
         return
     }
-
+    // asking the user what they wish to include in their password
     var userWantsUppercase = window.confirm("would you like to include uppercase letters in your password?")
+    var userWantsLowercase = window.confirm("would you like to include lowercase letters in your password?")
+    var userWantsSymbols = window.confirm("would you like to add symbols in your password?")
+    var userWantsNumbers = window.confirm("would you like to add numbers to your password?")
+
     
+
+
 
 
 
