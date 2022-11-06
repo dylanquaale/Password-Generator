@@ -73,7 +73,12 @@ function generatePassword() {
         optionCart.push(lowercaseList)
     }
 
+    //if user doesn't select any of the if statements then the uppercase will be pushed in the cart to be used for the password
+    if (optionCart.length === 0){
+        optionCart.push(uppercaseList)
+    }
 
+    
 
 
 
