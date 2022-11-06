@@ -78,7 +78,16 @@ function generatePassword() {
         optionCart.push(uppercaseList)
     }
 
-    
+    var generatedPassword = ""
+    //making list random 
+    for (var i = 0; i < passwordLength; i++) {
+        var randomList = getRandomItem(optionCart)
+        var randomChar = getRandomItem(randomList)
+        console.log(randomChar)
+        generatedPassword += randomChar
+        //this function ends generating password
+    }    
+
 
 
 
