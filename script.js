@@ -33,11 +33,12 @@ function generatePassword() {
         return
     }
     // asking the user what they wish to include in their password
-    var userWantsUppercase = window.confirm("would you like to include uppercase letters in your password?")
-    var userWantsLowercase = window.confirm("would you like to include lowercase letters in your password?")
-    var userWantsSymbols = window.confirm("would you like to add symbols in your password?")
-    var userWantsNumbers = window.confirm("would you like to add numbers to your password?")
+    var userWantsUppercase = window.alert("would you like to include uppercase letters in your password?")
+    var userWantsLowercase = window.alert("would you like to include lowercase letters in your password?")
+    var userWantsSymbols = window.alert("would you like to add symbols in your password?")
+    var userWantsNumbers = window.alert("would you like to add numbers to your password?")
 
+   // characters the user can choose from to create their password
     var upperseList = []
     var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     var numberList =   ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
