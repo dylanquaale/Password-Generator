@@ -6,10 +6,12 @@ function randomInt(min, max) {
         max = min
         min=0
     }
-}
+
 var rand = Math.random()
  return Math.floor(min*(1 - rand) + rand*max)
-//gives user and random position in the list 
+}
+
+ //gives user and random position in the list 
 function getRandomItem(list) {
     return list[randomInt(list.length)]
 }
@@ -18,10 +20,12 @@ function generatePassword() {
 
     var userInput = window.prompt("How many characters would you like in your password?")
     //parse in will try to give a string a number value 
+    
     var passwordLength = pareseInt(userInput)
     // tells us that is not a number
-    if(isNaN(passwordLength)) {
-        window.alert("oops not a number")
+    
+    if (isNaN(passwordLength)) {
+        window.alert("not a number!")
         return
     }
 
@@ -33,16 +37,43 @@ function generatePassword() {
         return
     }
     // asking the user what they wish to include in their password
-    var userWantsUppercase = window.alert("would you like to include uppercase letters in your password?")
-    var userWantsLowercase = window.alert("would you like to include lowercase letters in your password?")
-    var userWantsSymbols = window.alert("would you like to add symbols in your password?")
-    var userWantsNumbers = window.alert("would you like to add numbers to your password?")
+    var userWantsUppercase = window.confirm("would you like to include uppercase letters in your password?")
+    var userWantsLowercase = window.confirm("would you like to include lowercase letters in your password?")
+    var userWantsSymbols = window.confirm("would you like to add symbols in your password?")
+    var userWantsNumbers = window.confirm("would you like to add numbers to your password?")
 
    // characters the user can choose from to create their password
-    var upperseList = []
+    var uppercaseList = []
     var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     var numberList =   ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var symbolList = ["!", "@", "#", "$", "%", "^,", "&", "*", "(", ")"]
+
+    // this is the users cart
+    var optionCart = []
+    
+    //this is adding in the upper case
+    for (var i = 0; i < lowercaseList.length; i++) {
+        uppercaseList[i] = lowercaseList[i].toUpperCase()
+    }
+
+    // .push is adding characters to the cart
+    if (userWantsNumbers === true) {
+        optionCart.push(numberList)
+    }
+
+    if (userWantsSymbols === true) {
+        optionCart.push(symbolList)
+    }
+
+    if (userWantsUppercase === true) {
+        optionCart.push(uppercaseList)
+    }
+
+    if (userWantsLowercase === true) {
+        optionCart.push(lowercaseList)
+    }
+
+
 
 
 
