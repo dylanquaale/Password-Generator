@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
+//generating random character from min 8 to max 128
 function randomInt(min, max) {
     if (!max) {
         max = min
@@ -17,13 +17,16 @@ function getRandomItem(list) {
 }
 
 function generatePassword() {
-
+    // first prompt user will be met with
+    // must be more than 8 > 128 characters
+    // if user selects 0 uppercase will be selected. This is shown below 
     var userInput = window.prompt("How many characters would you like in your password?")
-    //parse in will try to give a string a number value 
     
+    //parse in will try to give a string a number value
     var passwordLength = parseInt(userInput)
-    // tells us that is not a number
     
+    // tells us that is not a number
+    // NaN literally means Not a Number 
     if (isNaN(passwordLength)) {
         window.alert("not a number!")
         return
@@ -37,12 +40,15 @@ function generatePassword() {
         return
     }
     // asking the user what they wish to include in their password
-    var userWantsUppercase = window.confirm("would you like to include uppercase letters in your password?")
-    var userWantsLowercase = window.confirm("would you like to include lowercase letters in your password?")
-    var userWantsSymbols = window.confirm("would you like to add symbols in your password?")
-    var userWantsNumbers = window.confirm("would you like to add numbers to your password?")
+    //providing interaction for the user in the drop down
+    var userWantsUppercase = window.alert("would you like to include uppercase letters in your password?")
+    var userWantsLowercase = window.alert("would you like to include lowercase letters in your password?")
+    var userWantsSymbols = window.alert("would you like to add symbols in your password?")
+    var userWantsNumbers = window.alert("would you like to add numbers to your password?")
 
    // characters the user can choose from to create their password
+   // user will be able to choose any of these characters
+   // as long as password is between 8 - 128 characters
     var uppercaseList = []
     var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     var numberList =   ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -60,15 +66,15 @@ function generatePassword() {
     if (userWantsNumbers === true) {
         optionCart.push(numberList)
     }
-
+    // has symbol items 
     if (userWantsSymbols === true) {
         optionCart.push(symbolList)
     }
-
+    // adding uppercase to the cart     
     if (userWantsUppercase === true) {
         optionCart.push(uppercaseList)
     }
-
+    // adding lower case to the cart 
     if (userWantsLowercase === true) {
         optionCart.push(lowercaseList)
     }
