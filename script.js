@@ -27,6 +27,7 @@ function generatePassword() {
     
     // tells us that is not a number
     // NaN literally means Not a Number 
+    // returns this to password generator line 106
     if (isNaN(passwordLength)) {
         window.alert("not a number!")
         return
@@ -104,8 +105,10 @@ function generatePassword() {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+// 
+  if (password) {
   passwordText.value = password;
+ }
 
 }
 
