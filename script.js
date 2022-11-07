@@ -42,10 +42,11 @@ function generatePassword() {
     }
     // asking the user what they wish to include in their password
     //providing interaction for the user in the drop down
-    var userWantsUppercase = window.alert("would you like to include uppercase letters in your password?")
-    var userWantsLowercase = window.alert("would you like to include lowercase letters in your password?")
-    var userWantsSymbols = window.alert("would you like to add symbols in your password?")
-    var userWantsNumbers = window.alert("would you like to add numbers to your password?")
+    // if you change window.confirm to window.alert what happens is the option to cancel password is gone
+    var userWantsUppercase = window.confirm("would you like to include uppercase letters in your password?")
+    var userWantsLowercase = window.confirm("would you like to include lowercase letters in your password?")
+    var userWantsSymbols = window.confirm("would you like to add symbols in your password?")
+    var userWantsNumbers = window.confirm("would you like to add numbers to your password?")
 
    // characters the user can choose from to create their password
    // user will be able to choose any of these characters
@@ -95,7 +96,7 @@ function generatePassword() {
         //this function ends generating password
     }    
 
-    return generatedPassword
+     return generatedPassword
 
 
 }
