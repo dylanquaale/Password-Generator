@@ -21,7 +21,7 @@ function generatePassword() {
     var userInput = window.prompt("How many characters would you like in your password?")
     //parse in will try to give a string a number value 
     
-    var passwordLength = pareseInt(userInput)
+    var passwordLength = parseInt(userInput)
     // tells us that is not a number
     
     if (isNaN(passwordLength)) {
