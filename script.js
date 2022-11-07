@@ -88,20 +88,10 @@ function generatePassword() {
         //this function ends generating password
     }    
 
-
-
-
-
-
-
-
-
+    return generatedPassword
 
 
 }
-
-
-
 
 
 // Write password to the #password input
