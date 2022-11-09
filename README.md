@@ -22,6 +22,7 @@ For employees to be able to generate a random password
 
 ## Credits
 
+https://stackoverflow.com/questions/1497481/javascript-password-generator
 https://www.youtube.com/watch?v=JheVaV6bPvE
 
 ## License
